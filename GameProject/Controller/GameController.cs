@@ -57,11 +57,19 @@ class GameController
         _renderer.Render(_state, tick);
     }
 
-    private void MovePlayer(int dx, int dy)
+    private void MovePlayerOne(int dx, int dy)
     {
-        var NewPosition = _state.Player.Position.Offset(dx, dy);
+        var NewPosition = _state.PlayerOne.Position.Offset(dx, dy);
 
-        _state.Player.Position = NewPosition;
+        _state.PlayerOne.Position = NewPosition;
+
+    }
+
+    private void MovePlayerTwo(int dx, int dy)
+    {
+        var NewPosition = _state.PlayerTwo.Position.Offset(dx, dy);
+
+        _state.PlayerTwo.Position = NewPosition;
     }
 
     private bool ApplyInput(GameInput input)
@@ -73,13 +81,19 @@ class GameController
             case GameInput.Quit: return false;
             case GameInput.None: break;
 
-            // movement
-            case GameInput.MoveUp: MovePlayer(0, -1); break;
-            case GameInput.MoveDown: MovePlayer(0, 1); break;
-            case GameInput.MoveLeft: MovePlayer(-1, 0); break; 
-            case GameInput.MoveRight: MovePlayer(1, 0); break; 
-            
-            default: break;       
+            // movement player one
+            case GameInput.MoveUp: MovePlayerOne(0, -1); break;
+            case GameInput.MoveDown: MovePlayerOne(0, 1); break;
+            case GameInput.MoveLeft: MovePlayerOne(-1, 0); break; 
+            case GameInput.MoveRight: MovePlayerOne(1, 0); break;
+
+            // movement player 2
+            case GameInput.MoveUpArrow: MovePlayerTwo(0, -1); break;
+            case GameInput.MoveDownArrow: MovePlayerTwo(0, 1); break;
+            case GameInput.MoveLeftArrow: MovePlayerTwo(-1, 0); break;
+            case GameInput.MoveRightArrow: MovePlayerTwo(1, 0); break;
+
+            default: break;
         }
         return true;
     }

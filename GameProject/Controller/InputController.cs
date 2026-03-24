@@ -28,11 +28,18 @@ class InputController
             // TODO: Weitere Tasten auf GameInput-Werte mappen,
             //       z.B. W/A/S/D oder die Pfeiltasten für Bewegung.
 
+            // player one
             ConsoleKey.W => GameInput.MoveUp,
             ConsoleKey.S => GameInput.MoveDown,
             ConsoleKey.A => GameInput.MoveLeft,
             ConsoleKey.D => GameInput.MoveRight,
-            
+
+            // player two
+            ConsoleKey.UpArrow => GameInput.MoveUpArrow,
+            ConsoleKey.DownArrow => GameInput.MoveDownArrow,
+            ConsoleKey.LeftArrow => GameInput.MoveLeftArrow,
+            ConsoleKey.RightArrow => GameInput.MoveRightArrow,
+
             _ => GameInput.None
         };
     }

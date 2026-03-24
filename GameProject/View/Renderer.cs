@@ -18,9 +18,14 @@ class Renderer
             {
                 var position = new Position(x, y);
 
-                if (position == state.Player.Position)
+                if (position == state.PlayerOne.Position)
                 {
-                    buffer.Append(state.Player.Symbol);
+                    buffer.Append(state.PlayerOne.Symbol);
+                    continue;
+                }
+                else if (position == state.PlayerTwo.Position)
+                {
+                    buffer.Append(state.PlayerTwo.Symbol);
                     continue;
                 }
 
