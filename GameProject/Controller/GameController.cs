@@ -33,7 +33,7 @@ class GameController
             Render(tick);
 
             tick++;
-            Thread.Sleep(500); // FPS?
+            Thread.Sleep(60); // FPS?
         }
 
         Console.SetCursorPosition(0, _state.World.Height + 4);

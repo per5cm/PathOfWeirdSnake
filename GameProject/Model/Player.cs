@@ -2,7 +2,7 @@
 
 class Player
 {
-    public Player(Position startPosition, char symbol)
+    public Player(Position startPosition, string symbol)
     {
         Position = startPosition;
         Symbol = symbol;
@@ -10,5 +10,5 @@ class Player
 
     public Position Position { get; set; }
 
-    public char Symbol { get; set; } 
+    public string Symbol { get; set; } 
 }

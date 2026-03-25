@@ -40,17 +40,17 @@ class Renderer
         buffer.AppendLine("[ESC] oder [Q] Beenden | [W] Up [S] Down [A] Links [D] Rechts ");
         buffer.AppendLine();
         buffer.AppendLine("========================= Legende ==============================");
-        buffer.AppendLine("X = Spieler | # = Mauer | ~ = Wasser | ! = Punkt der Interaktion");
+        buffer.AppendLine("😏 = Spieler 1 | 😈 = Spieler 2 | █ = Mauer | ~ = Wasser | ★ = Punkt der Interaktion");
 
         Console.Write(buffer.ToString());
     }
 
     private static char ToSymbol(TileType tile) => tile switch
     {
-        TileType.Wall => '#',
+        TileType.Wall => '█',
         TileType.Floor => ' ',
         TileType.Water => '~',
-        TileType.PointOfInterest => '!',
+        TileType.PointOfInterest => '★',
         _ => ' '
     };
 }

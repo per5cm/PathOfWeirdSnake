@@ -35,10 +35,10 @@ class InputController
             ConsoleKey.D => GameInput.MoveRight,
 
             // player two
-            ConsoleKey.UpArrow => GameInput.MoveUpArrow,
-            ConsoleKey.DownArrow => GameInput.MoveDownArrow,
-            ConsoleKey.LeftArrow => GameInput.MoveLeftArrow,
-            ConsoleKey.RightArrow => GameInput.MoveRightArrow,
+            ConsoleKey.I => GameInput.MoveUpArrow,
+            ConsoleKey.K => GameInput.MoveDownArrow,
+            ConsoleKey.J => GameInput.MoveLeftArrow,
+            ConsoleKey.L => GameInput.MoveRightArrow,
 
             _ => GameInput.None
         };
