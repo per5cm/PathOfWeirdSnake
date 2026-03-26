@@ -67,7 +67,7 @@ class GameController
     { 
         var newPosition = _state.PlayerOne.Position.Offset(dx, dy);
 
-        if (_state.World.Walkable(newPosition))
+        if (_state.World.IsInside(newPosition))
         {
             _state.PlayerOne.Position = newPosition;
 
@@ -82,7 +82,7 @@ class GameController
     {
         var newPosition = _state.PlayerTwo.Position.Offset(dx, dy);
 
-        if (_state.World.Walkable(newPosition))
+        if (_state.World.IsInside(newPosition))
         {
             _state.PlayerTwo.Position = newPosition;
 

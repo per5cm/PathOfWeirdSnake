@@ -63,13 +63,6 @@ class World
                position.Y >= 0 && position.Y < Height;
     }
 
-    public bool Walkable(Position position)
-    {
-        if (IsInside(position)) return true;
-
-        else return false;
-    }
-
     public TileType GetTile(Position position)
     {
         if (!IsInside(position))
