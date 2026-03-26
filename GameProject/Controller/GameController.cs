@@ -23,6 +23,8 @@ class GameController
     {
         //Console.Clear();
         Console.CursorVisible = false;
+        if (_state.PlayerOne.Dead) Console.WriteLine("You Dead!");
+        if (_state.PlayerTwo.Dead) Console.WriteLine("You Dead!");
 
         bool isRunning = true;
         int tick = 0;
@@ -47,6 +49,10 @@ class GameController
         var isRunning = ApplyInput(input);
 
         // TODO: Erweiterungspunkt für Spielsysteme (z.B. Quests, Trigger, Interaktionen).
+        if (_state.PlayerOne.Dead || _state.PlayerTwo.Dead)
+        {
+            return false;
+        }
 
         return isRunning;
     }
@@ -58,23 +64,32 @@ class GameController
     }
 
     private void MovePlayerOne(int dx, int dy)
-    {
-        
-        var NewPosition = _state.PlayerOne.Position.Offset(dx, dy);
+    { 
+        var newPosition = _state.PlayerOne.Position.Offset(dx, dy);
 
-        if (_state.World.Walkable(NewPosition))
+        if (_state.World.Walkable(newPosition))
         {
-            _state.PlayerOne.Position = NewPosition;
+            _state.PlayerOne.Position = newPosition;
+
+            if (_state.World.GetTile(newPosition) == TileType.Water)
+            {
+                _state.PlayerOne.Dead = true;
+            }
         }
     }
 
     private void MovePlayerTwo(int dx, int dy)
     {
-        var NewPosition = _state.PlayerTwo.Position.Offset(dx, dy);
+        var newPosition = _state.PlayerTwo.Position.Offset(dx, dy);
 
-        if (_state.World.Walkable(NewPosition))
+        if (_state.World.Walkable(newPosition))
         {
-            _state.PlayerTwo.Position = NewPosition;
+            _state.PlayerTwo.Position = newPosition;
+
+            if (_state.World.GetTile(newPosition) == TileType.Water)
+            {
+                _state.PlayerTwo.Dead = true;
+            }
         }
     }
 
@@ -83,7 +98,6 @@ class GameController
         switch (input)
         {
             // TODO: Steuerung (Bewegung) hier umsetzen.
-
             case GameInput.Quit: return false;
             case GameInput.None: break;
 
