@@ -22,7 +22,7 @@ class GameController
     public void Run()
     {
         //Console.Clear();
-        Console.CursorVisible = false;
+        Console.CursorVisible = true;
         if (_state.PlayerOne.Dead) Console.WriteLine("You Dead!");
         if (_state.PlayerTwo.Dead) Console.WriteLine("You Dead!");
 
@@ -49,6 +49,8 @@ class GameController
         var isRunning = ApplyInput(input);
 
         // TODO: Erweiterungspunkt für Spielsysteme (z.B. Quests, Trigger, Interaktionen).
+
+        // event of players death.
         if (_state.PlayerOne.Dead || _state.PlayerTwo.Dead)
         {
             return false;

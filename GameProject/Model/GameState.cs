@@ -6,11 +6,13 @@ class GameState
 
     public Player PlayerOne { get; }
     public Player PlayerTwo { get; } 
+    public Enemy Enemy {  get; }
 
-    public GameState(World world, Player playerOne, Player playerTwo)
+    public GameState(World world, Player playerOne, Player playerTwo, Enemy enemy)
     {
         World = world;
         PlayerOne = playerOne;
         PlayerTwo = playerTwo;
+        Enemy = enemy;
     }
 }

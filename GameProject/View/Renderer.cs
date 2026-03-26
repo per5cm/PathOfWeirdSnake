@@ -28,6 +28,11 @@ class Renderer
                     buffer.Append(state.PlayerTwo.Symbol);
                     continue;
                 }
+                else if (position == state.Enemy.Position)
+                {
+                    buffer.Append(state.Enemy.Symbol);
+                    continue;
+                }
 
                 var tile = state.World.GetTile(position);
                 buffer.Append(ToSymbol(tile));
