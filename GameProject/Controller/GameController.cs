@@ -22,9 +22,9 @@ class GameController
     public void Run()
     {
         //Console.Clear();
-        Console.CursorVisible = true;
-        if (_state.PlayerOne.Dead) Console.WriteLine("You Dead!");
-        if (_state.PlayerTwo.Dead) Console.WriteLine("You Dead!");
+        Console.CursorVisible = false;
+        //if (_state.PlayerOne.Dead) Console.WriteLine("You Dead!");
+        //if (_state.PlayerTwo.Dead) Console.WriteLine("You Dead!");
 
         bool isRunning = true;
         int tick = 0;
@@ -51,8 +51,14 @@ class GameController
         // TODO: Erweiterungspunkt für Spielsysteme (z.B. Quests, Trigger, Interaktionen).
 
         // event of players death.
-        if (_state.PlayerOne.Dead || _state.PlayerTwo.Dead)
+        if (_state.PlayerOne.Dead)
         {
+            Console.WriteLine("You Dead!");
+            return false;
+        }
+        else if (_state.PlayerTwo.Dead)
+        {
+            Console.WriteLine("You Dead!");
             return false;
         }
 
@@ -77,6 +83,10 @@ class GameController
             {
                 _state.PlayerOne.Dead = true;
             }
+            else if (newPosition == _state.Enemy.Position)
+            {
+                _state.PlayerOne.Dead = true;
+            }
         }
     }
 
@@ -89,6 +99,10 @@ class GameController
             _state.PlayerTwo.Position = newPosition;
 
             if (_state.World.GetTile(newPosition) == TileType.Water)
+            {
+                _state.PlayerTwo.Dead = true;
+            }
+            else if (newPosition == _state.Enemy.Position)
             {
                 _state.PlayerTwo.Dead = true;
             }
