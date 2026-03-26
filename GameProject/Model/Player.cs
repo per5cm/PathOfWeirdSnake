@@ -6,9 +6,12 @@ class Player
     {
         Position = startPosition;
         Symbol = symbol;
+        //Dead = dead;
     }
 
     public Position Position { get; set; }
 
-    public string Symbol { get; set; } 
+    public string Symbol { get; set; } = "  ";
+
+    //public bool Dead { get; init; } = false;
 }

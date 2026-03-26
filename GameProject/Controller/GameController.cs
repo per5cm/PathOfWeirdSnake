@@ -59,17 +59,23 @@ class GameController
 
     private void MovePlayerOne(int dx, int dy)
     {
+        
         var NewPosition = _state.PlayerOne.Position.Offset(dx, dy);
 
-        _state.PlayerOne.Position = NewPosition;
-
+        if (_state.World.Walkable(NewPosition))
+        {
+            _state.PlayerOne.Position = NewPosition;
+        }
     }
 
     private void MovePlayerTwo(int dx, int dy)
     {
         var NewPosition = _state.PlayerTwo.Position.Offset(dx, dy);
 
-        _state.PlayerTwo.Position = NewPosition;
+        if (_state.World.Walkable(NewPosition))
+        {
+            _state.PlayerTwo.Position = NewPosition;
+        }
     }
 
     private bool ApplyInput(GameInput input)
