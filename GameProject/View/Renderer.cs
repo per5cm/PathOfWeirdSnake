@@ -45,7 +45,7 @@ class Renderer
         buffer.AppendLine("[ESC] oder [Q] Beenden | [W] Up [S] Down [A] Links [D] Rechts ");
         buffer.AppendLine();
         buffer.AppendLine("========================= Legende ==============================");
-        buffer.AppendLine("😏 = Spieler 1 | 😈 = Spieler 2 | █ = Mauer | ~ = Wasser | ★ = Punkt der Interaktion");
+        buffer.AppendLine("😏 = Spieler 1 | 😈 = Spieler 2 | @ - Gegner | █ = Mauer | ~ = Wasser | ★ = Punkt der Interaktion");
 
         Console.Write(buffer.ToString());
     }
