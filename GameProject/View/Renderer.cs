@@ -18,17 +18,20 @@ class Renderer
             {
                 var position = new Position(x, y);
 
+                // player
                 if (position == state.PlayerOne.Position)
                 {
                     buffer.Append(state.PlayerOne.Symbol);
                     continue;
                 }
-                else if (position == state.PlayerTwo.Position)
+                if (position == state.PlayerTwo.Position)
                 {
                     buffer.Append(state.PlayerTwo.Symbol);
                     continue;
                 }
-                else if (position == state.Enemy.Position)
+
+                // enemy
+                if (position == state.Enemy.Position)
                 {
                     buffer.Append(state.Enemy.Symbol);
                     continue;
@@ -59,18 +62,3 @@ class Renderer
         _ => ' '
     };
 }
-
-
-//private static string FormatCell(string content)
-//    {
-//        // ANSI-Codes entfernen (falls vorhanden)
-//        var visible = System.Text.RegularExpressions.Regex
-//            .Replace(content, @"\x1B\[[0-9;]*m", "");
-
-//        // Wenn es ein normales Zeichen ist → KEIN Padding!
-//        if (visible.Length == 1)
-//            return content;
-
-//        // Wenn es ein Emoji ist → auf 2 auffüllen
-//        return content.PadRight(2);
-//    }

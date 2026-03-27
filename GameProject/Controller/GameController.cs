@@ -50,12 +50,7 @@ class GameController
         // TODO: Erweiterungspunkt für Spielsysteme (z.B. Quests, Trigger, Interaktionen).
 
         // event of players death.
-        if (_state.PlayerOne.Dead)
-        {
-            Console.WriteLine("You Dead!");
-            return false;
-        }
-        else if (_state.PlayerTwo.Dead)
+        if (_state.PlayerOne.Dead || _state.PlayerTwo.Dead)
         {
             Console.WriteLine("You Dead!");
             return false;
@@ -71,41 +66,18 @@ class GameController
     }
 
     #region Player
-    private void MovePlayerOne(int dx, int dy)
+    private void MovePlayer(Player player,int dx, int dy)
     { 
         var newPosition = _state.PlayerOne.Position.Offset(dx, dy);
 
         if (_state.World.IsInside(newPosition))
         {
-            _state.PlayerOne.Position = newPosition;
-
-            if (_state.World.GetTile(newPosition) == TileType.Water)
-            {
-                _state.PlayerOne.Dead = true;
-            }
-            else if (newPosition == _state.Enemy.Position)
-            {
-                _state.PlayerOne.Dead = true;
-            }
+            player.Position = newPosition;
         }
-    }
-
-    private void MovePlayerTwo(int dx, int dy)
-    {
-        var newPosition = _state.PlayerTwo.Position.Offset(dx, dy);
-
-        if (_state.World.IsInside(newPosition))
+        
+        if (_state.World.GetTile(newPosition) == TileType.Water)
         {
-            _state.PlayerTwo.Position = newPosition;
-
-            if (_state.World.GetTile(newPosition) == TileType.Water)
-            {
-                _state.PlayerTwo.Dead = true;
-            }
-            else if (newPosition == _state.Enemy.Position)
-            {
-                _state.PlayerTwo.Dead = true;
-            }
+            _state.PlayerOne.Dead = true;
         }
     }
 
@@ -118,16 +90,16 @@ class GameController
             case GameInput.None: break;
 
             // movement player one
-            case GameInput.MoveUp: MovePlayerOne(0, -1); break;
-            case GameInput.MoveDown: MovePlayerOne(0, 1); break;
-            case GameInput.MoveLeft: MovePlayerOne(-1, 0); break; 
-            case GameInput.MoveRight: MovePlayerOne(1, 0); break;
+            case GameInput.MoveUp: MovePlayer(_state.PlayerOne, 0, -1); break;
+            case GameInput.MoveDown: MovePlayer(_state.PlayerOne, 0, 1); break;
+            case GameInput.MoveLeft: MovePlayer(_state.PlayerOne, -1, 0); break; 
+            case GameInput.MoveRight: MovePlayer(_state.PlayerOne, 1, 0); break;
 
             // movement player 2
-            case GameInput.MoveUpArrow: MovePlayerTwo(0, -1); break;
-            case GameInput.MoveDownArrow: MovePlayerTwo(0, 1); break;
-            case GameInput.MoveLeftArrow: MovePlayerTwo(-1, 0); break;
-            case GameInput.MoveRightArrow: MovePlayerTwo(1, 0); break;
+            case GameInput.MoveUpArrow: MovePlayer(_state.PlayerTwo, 0, -1); break;
+            case GameInput.MoveDownArrow: MovePlayer(_state.PlayerTwo, 0, 1); break;
+            case GameInput.MoveLeftArrow: MovePlayer(_state.PlayerTwo, -1, 0); break;
+            case GameInput.MoveRightArrow: MovePlayer(_state.PlayerTwo, 1, 0); break;
 
             default: break;
         }
@@ -136,22 +108,18 @@ class GameController
     #endregion
 
     #region Enemy
-    private void MoveEnemy(int dx, int dy)
+    private void MoveEnemy(Enemy enemy, int dx, int dy)
     {
-        var newMove = _state.Enemy.Position.Offset(dx, dy);
+        var newMove = enemy.Position.Offset(dx, dy);
 
         if (_state.World.IsInside(newMove))
         {
-            _state.Enemy.Position = newMove;
+            enemy.Position = newMove;
+        }
 
-            if (newMove == _state.PlayerOne.Position)
-            {
-                _state.PlayerOne.Dead = true;
-            }
-            else if (newMove == _state.PlayerTwo.Position)
-            {
-                _state.PlayerTwo.Dead = true;
-            }
+        if (newMove == _state.PlayerOne.Position || newMove == _state.PlayerTwo.Position)
+        {
+            _state.PlayerOne.Dead = true;
         }
     }
 
@@ -161,11 +129,11 @@ class GameController
 
         switch (move)
         {
-            case 1: MoveEnemy(0, -1); break;
-            case 2: MoveEnemy(0, 1); break;
-            case 3: MoveEnemy(-1, 0); break;
-            case 4: MoveEnemy(1, 0); break;
-        }
+            case 1: MoveEnemy(_state.Enemy, 0, -1); break;
+            case 2: MoveEnemy(_state.Enemy, 0, 1); break;
+            case 3: MoveEnemy(_state.Enemy, -1, 0); break;
+            case 4: MoveEnemy(_state.Enemy, 1, 0); break;
+        }  
     }
     #endregion
 }
