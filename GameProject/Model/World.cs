@@ -4,6 +4,7 @@ class World
 {
     private readonly HashSet<Position> _pointsOfInterest;
     private readonly HashSet<Position> _water;
+    private readonly HashSet<Position> _wall;
 
     public World(int width, int height)
     {
@@ -21,7 +22,12 @@ class World
             new (Width - 3, Height - 3),
             new (Width / 2, Height - 2)
         };
-        
+
+        _wall = new HashSet<Position>
+        {
+            //new (0, -1),
+        };
+
         _water = new HashSet<Position>
         {
             new (5, 4), 
@@ -63,6 +69,12 @@ class World
                position.Y >= 0 && position.Y < Height;
     }
 
+    public bool IsWalkable(Position position)
+    {
+        TileType tile = GetTile(position);
+        return tile != TileType.Wall && tile != TileType.Empty;
+    }
+
     public TileType GetTile(Position position)
     {
         if (!IsInside(position))
@@ -88,5 +100,3 @@ class World
         return TileType.Floor;
     }
 }
-
-

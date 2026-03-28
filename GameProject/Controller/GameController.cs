@@ -1,5 +1,6 @@
 ﻿using GameProject.Model;
 using GameProject.View;
+using System.Numerics;
 
 namespace GameProject.Controller;
 
@@ -70,7 +71,7 @@ class GameController
     { 
         var newPosition = _state.PlayerOne.Position.Offset(dx, dy);
 
-        if (_state.World.IsInside(newPosition))
+        if (_state.World.IsWalkable(newPosition))
         {
             player.Position = newPosition;
         }
@@ -112,7 +113,7 @@ class GameController
     {
         var newMove = enemy.Position.Offset(dx, dy);
 
-        if (_state.World.IsInside(newMove))
+        if (_state.World.IsWalkable(newMove))
         {
             enemy.Position = newMove;
         }
@@ -129,8 +130,8 @@ class GameController
 
         switch (move)
         {
-            case 1: MoveEnemy(_state.Enemy, 0, -1); break;
-            case 2: MoveEnemy(_state.Enemy, 0, 1); break;
+            case 1: MoveEnemy(_state.Enemy, 0, -3); break;
+            case 2: MoveEnemy(_state.Enemy, 0, 3); break;
             case 3: MoveEnemy(_state.Enemy, -1, 0); break;
             case 4: MoveEnemy(_state.Enemy, 1, 0); break;
         }  
