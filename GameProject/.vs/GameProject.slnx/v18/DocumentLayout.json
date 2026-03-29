@@ -94,8 +94,7 @@
               "RelativeToolTip": "Model\\World.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAAwwEkAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T20:45:24.672Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T20:45:24.672Z"
             },
             {
               "$type": "Document",
@@ -107,8 +106,7 @@
               "RelativeToolTip": "View\\Renderer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T17:45:59.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T17:45:59.125Z"
             },
             {
               "$type": "Document",
@@ -120,8 +118,7 @@
               "RelativeToolTip": "Model\\GameState.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T17:36:50.819Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T17:36:50.819Z"
             },
             {
               "$type": "Document",
@@ -133,8 +130,7 @@
               "RelativeToolTip": "GameFactory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T17:36:21.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T17:36:21.051Z"
             },
             {
               "$type": "Document",
@@ -146,8 +142,7 @@
               "RelativeToolTip": "Model\\Player.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T17:33:45.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T17:33:45.395Z"
             },
             {
               "$type": "Document",
@@ -159,8 +154,7 @@
               "RelativeToolTip": "Model\\Enemy.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T17:28:20.018Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T17:28:20.018Z"
             },
             {
               "$type": "Document",
@@ -170,7 +164,7 @@
               "RelativeDocumentMoniker": "Controller\\GameController.cs",
               "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\PathOfWeirdSnake\\GameProject\\Controller\\GameController.cs",
               "RelativeToolTip": "Controller\\GameController.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAcwFMAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAmwEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-26T17:13:45.961Z",
               "EditorCaption": ""

@@ -30,7 +30,7 @@ class GameController
 
         while (isRunning)
         {
-            isRunning = Update();
+            isRunning = Update(tick);
             Render(tick);
 
             tick++;
@@ -42,11 +42,11 @@ class GameController
         Console.WriteLine("Spiel beendet.");
     }
 
-    private bool Update()
+    private bool Update(int tick)
     {
         var input = _inputController.ReadInput(_state);
         var isRunning = ApplyInput(input);
-        ApplyMoveEnemy();
+        ApplyMoveEnemy(tick);
 
         // TODO: Erweiterungspunkt für Spielsysteme (z.B. Quests, Trigger, Interaktionen).
 
@@ -127,8 +127,10 @@ class GameController
         }
     }
 
-    private void ApplyMoveEnemy()
+    private void ApplyMoveEnemy(int tick)
     {
+        if (tick % 3 != 0) return;
+
         int move = Rng.Next(1, 5);
 
         switch (move)
