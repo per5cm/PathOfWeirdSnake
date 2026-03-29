@@ -4,7 +4,7 @@ class Player
 {
     public Position Position { get; set; }
 
-    public string Symbol { get; set; } = "  ";
+    public string Symbol { get; set; } = string.Empty;
 
     public bool Dead { get; set; } = false;
 

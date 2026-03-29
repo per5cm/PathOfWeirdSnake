@@ -8,7 +8,7 @@ static class GameFactory
 {
     public static GameController Create()
     {
-        var world = new World(width: 30, height: 12);
+        var world = new World(width: 54, height: 18);
 
         var player = new Player(startPosition: new Position(3, 3), "😏", dead: false);
         var player2 = new Player(startPosition: new Position(3, 9), "😈", dead: false);

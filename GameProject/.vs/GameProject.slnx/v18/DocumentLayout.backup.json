@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\Eric\\Desktop\\Projects\\PathOfWeirdSnake\\GameProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|c:\\users\\eric\\desktop\\projects\\pathofweirdsnake\\gameproject\\view\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|solutionrelative:view\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|c:\\users\\eric\\desktop\\projects\\pathofweirdsnake\\gameproject\\model\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|solutionrelative:model\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|c:\\users\\eric\\desktop\\projects\\pathofweirdsnake\\gameproject\\controller\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|solutionrelative:controller\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|c:\\users\\eric\\desktop\\projects\\pathofweirdsnake\\gameproject\\gamefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|solutionrelative:gamefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|c:\\users\\eric\\desktop\\projects\\pathofweirdsnake\\gameproject\\model\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|solutionrelative:model\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,22 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|c:\\users\\eric\\desktop\\projects\\pathofweirdsnake\\gameproject\\controller\\gameinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|solutionrelative:controller\\gameinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|c:\\users\\eric\\desktop\\projects\\pathofweirdsnake\\gameproject\\controller\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|solutionrelative:controller\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|c:\\users\\eric\\desktop\\projects\\pathofweirdsnake\\gameproject\\view\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|solutionrelative:view\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|c:\\users\\eric\\desktop\\projects\\pathofweirdsnake\\gameproject\\gamefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|solutionrelative:gamefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|c:\\users\\eric\\desktop\\projects\\pathofweirdsnake\\gameproject\\model\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{888D02C4-1105-2574-1DD0-C8FC69A10A1A}|GameProject.csproj|solutionrelative:model\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "GameInput.cs",
               "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\PathOfWeirdSnake\\GameProject\\Controller\\GameInput.cs",
               "RelativeDocumentMoniker": "Controller\\GameInput.cs",
@@ -70,12 +70,11 @@
               "RelativeToolTip": "Controller\\GameInput.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T23:48:45.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T23:48:45.118Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "InputController.cs",
               "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\PathOfWeirdSnake\\GameProject\\Controller\\InputController.cs",
               "RelativeDocumentMoniker": "Controller\\InputController.cs",
@@ -83,37 +82,37 @@
               "RelativeToolTip": "Controller\\InputController.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwAYAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T23:47:32.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T23:47:32.5Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "World.cs",
               "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\PathOfWeirdSnake\\GameProject\\Model\\World.cs",
               "RelativeDocumentMoniker": "Model\\World.cs",
               "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\PathOfWeirdSnake\\GameProject\\Model\\World.cs",
               "RelativeToolTip": "Model\\World.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T20:45:24.672Z"
+              "WhenOpened": "2026-03-26T20:45:24.672Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Renderer.cs",
               "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\PathOfWeirdSnake\\GameProject\\View\\Renderer.cs",
               "RelativeDocumentMoniker": "View\\Renderer.cs",
               "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\PathOfWeirdSnake\\GameProject\\View\\Renderer.cs",
               "RelativeToolTip": "View\\Renderer.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCMAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwCMAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-26T17:45:59.125Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "GameState.cs",
               "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\PathOfWeirdSnake\\GameProject\\Model\\GameState.cs",
               "RelativeDocumentMoniker": "Model\\GameState.cs",
@@ -121,12 +120,11 @@
               "RelativeToolTip": "Model\\GameState.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T17:36:50.819Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T17:36:50.819Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "GameFactory.cs",
               "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\PathOfWeirdSnake\\GameProject\\GameFactory.cs",
               "RelativeDocumentMoniker": "GameFactory.cs",
@@ -138,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\PathOfWeirdSnake\\GameProject\\Model\\Player.cs",
               "RelativeDocumentMoniker": "Model\\Player.cs",
@@ -146,12 +144,11 @@
               "RelativeToolTip": "Model\\Player.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T17:33:45.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T17:33:45.395Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\PathOfWeirdSnake\\GameProject\\Model\\Enemy.cs",
               "RelativeDocumentMoniker": "Model\\Enemy.cs",
@@ -159,21 +156,19 @@
               "RelativeToolTip": "Model\\Enemy.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T17:28:20.018Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T17:28:20.018Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "GameController.cs",
               "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\PathOfWeirdSnake\\GameProject\\Controller\\GameController.cs",
               "RelativeDocumentMoniker": "Controller\\GameController.cs",
               "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\PathOfWeirdSnake\\GameProject\\Controller\\GameController.cs",
               "RelativeToolTip": "Controller\\GameController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwEoAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAwwEcAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T17:13:45.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T17:13:45.961Z"
             }
           ]
         },

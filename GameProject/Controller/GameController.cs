@@ -69,16 +69,18 @@ class GameController
     #region Player
     private void MovePlayer(Player player,int dx, int dy)
     { 
-        var newPosition = _state.PlayerOne.Position.Offset(dx, dy);
+        var newPosition = player.Position.Offset(dx, dy);
 
         if (_state.World.IsWalkable(newPosition))
         {
             player.Position = newPosition;
         }
+
+        // death conditions/events
         
         if (_state.World.GetTile(newPosition) == TileType.Water)
         {
-            _state.PlayerOne.Dead = true;
+            player.Dead = true;
         }
     }
 
@@ -121,6 +123,7 @@ class GameController
         if (newMove == _state.PlayerOne.Position || newMove == _state.PlayerTwo.Position)
         {
             _state.PlayerOne.Dead = true;
+            _state.PlayerTwo.Dead = true;
         }
     }
 
@@ -130,8 +133,8 @@ class GameController
 
         switch (move)
         {
-            case 1: MoveEnemy(_state.Enemy, 0, -3); break;
-            case 2: MoveEnemy(_state.Enemy, 0, 3); break;
+            case 1: MoveEnemy(_state.Enemy, 0, -1); break;
+            case 2: MoveEnemy(_state.Enemy, 0, 1); break;
             case 3: MoveEnemy(_state.Enemy, -1, 0); break;
             case 4: MoveEnemy(_state.Enemy, 1, 0); break;
         }  

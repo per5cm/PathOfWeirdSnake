@@ -25,7 +25,13 @@ class World
 
         _wall = new HashSet<Position>
         {
-            //new (0, -1),
+            new (14, 2),
+            new (14, 4),
+            new (14, 5),
+            new (14, 6),
+            new (14, 7),
+            new (14, 8),
+            new (14, 9),
         };
 
         _water = new HashSet<Position>
@@ -48,14 +54,14 @@ class World
             new (9, 6),
             
             
-            new (15, 2),
-            new (16, 2),
-            new (17, 2),
-            new (18, 2),
-            new (15, 3),
-            new (16, 3),
-            new (17, 3),
-            new (18, 3),
+            new (19, 10),
+            new (20, 10),
+            new (21, 10),
+            new (22, 10),
+            new (20, 11),
+            new (21, 11),
+            new (22, 11),
+            new (23, 11),
         };
     }
 
@@ -83,6 +89,11 @@ class World
         }
 
         else if (position.X == 0 || position.Y == 0 || position.X == Width - 1 || position.Y == Height - 1)
+        {
+            return TileType.Wall;
+        }
+
+        else if (_wall.Contains(position))
         {
             return TileType.Wall;
         }
