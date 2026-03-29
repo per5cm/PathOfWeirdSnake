@@ -9,7 +9,8 @@ class GameController
     private readonly GameState _state;
     private readonly Renderer _renderer;
     private readonly InputController _inputController;
-    private readonly Random Rng = new();
+
+    private readonly Random _random = new();
 
     public GameController(GameState state, Renderer renderer, InputController inputController)
     {
@@ -131,7 +132,7 @@ class GameController
     {
         if (tick % 3 != 0) return;
 
-        int move = Rng.Next(1, 5);
+        int move = _random.Next(1, 5);
 
         switch (move)
         {

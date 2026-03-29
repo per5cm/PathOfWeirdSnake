@@ -39,6 +39,7 @@ class Renderer
 
                 var tile = state.World.GetTile(position);
                 buffer.Append(ToSymbol(tile));
+                //buffer.Append(' ');
             }
 
             buffer.AppendLine();
@@ -48,7 +49,7 @@ class Renderer
         buffer.AppendLine("[ESC] oder [Q] Beenden | [W] Up [S] Down [A] Links [D] Rechts ");
         buffer.AppendLine();
         buffer.AppendLine("========================= Legende ==============================");
-        buffer.AppendLine("😏 = Spieler 1 | 😈 = Spieler 2 | @ - Gegner | █ = Mauer | ~ = Wasser | ★ = Punkt der Interaktion");
+        buffer.AppendLine("♞ = Spieler 1 | ♝ = Spieler 2 | ⚔ - Gegner | █ = Mauer | ~ = Wasser | ✦ = Punkt der Interaktion");
 
         Console.Write(buffer.ToString());
     }
@@ -57,8 +58,8 @@ class Renderer
     {
         TileType.Wall => '█',
         TileType.Floor => ' ',
-        TileType.Water => '~',
-        TileType.PointOfInterest => '★',
+        TileType.Water => '≈',
+        TileType.PointOfInterest => '✦',
         _ => ' '
     };
 }
