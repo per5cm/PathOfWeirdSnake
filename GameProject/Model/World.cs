@@ -29,12 +29,19 @@ class World
         {
             //new(width, height),
 
+            // 1st, wall.
             new (14, 2),
             new (14, 5),
             new (14, 6),
             new (14, 7),
             new (14, 8),
             new (14, 9),
+
+            // 2nd, wall
+            new (34, 12),
+            new (34, 13),
+            new (34, 14),
+            new (34, 15),
         };
 
         _water = new HashSet<Position>
@@ -69,7 +76,7 @@ class World
 
         _pointsOfInterest = new HashSet<Position>();
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 10; i++)
         {
             int x = _random.Next(1, Width - 1); // <--- from top left 1, width -2 means minus from total width. otherwise point of intrest spawns in the walls.
             int y = _random.Next(1, Height - 1); // <--- to botom right 1,height -2 means minus from total heigh.
@@ -80,6 +87,16 @@ class World
                 _pointsOfInterest.Add(position);
             }
         }
+    }
+
+    public bool GetScore(Position position)
+    {
+        return GetTile(position) == TileType.PointOfInterest;
+    }
+
+    public void CollectScore(Position position)
+    {
+        _pointsOfInterest.Remove(position);
     }
 
     public bool IsInside(Position position)

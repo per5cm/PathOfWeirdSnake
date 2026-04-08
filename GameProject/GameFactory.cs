@@ -10,8 +10,8 @@ static class GameFactory
     {
         var world = new World(width: 54, height: 18);
 
-        var player = new Player(startPosition: new Position(3, 3), "♞", dead: false);
-        var player2 = new Player(startPosition: new Position(3, 9), "♝", dead: false);
+        var player = new Player(startPosition: new Position(3, 3), "♞", dead: false, 0);
+        var player2 = new Player(startPosition: new Position(3, 9), "♝", dead: false, 0);
 
         var enemy = new Enemy(startPosition: new Position(9, 3), "⚔");
 

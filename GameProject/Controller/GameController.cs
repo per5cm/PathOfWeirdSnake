@@ -23,8 +23,6 @@ class GameController
     {
         //Console.Clear();
         Console.CursorVisible = false;
-        //if (_state.PlayerOne.Dead) Console.WriteLine("You Dead!");
-        //if (_state.PlayerTwo.Dead) Console.WriteLine("You Dead!");
 
         bool isRunning = true;
         int tick = 0;
@@ -36,11 +34,18 @@ class GameController
 
             tick++;
             Thread.Sleep(60); // FPS?
+
+
         }
 
         Console.SetCursorPosition(0, _state.World.Height + 4);
         Console.CursorVisible = true;
         Console.WriteLine("Spiel beendet.");
+        if (_state.PlayerOne.Dead) Console.WriteLine("Hey Player one, guess what? You Dead!");
+        if (_state.PlayerTwo.Dead) Console.WriteLine("Hey Player two, guess what? You Dead!");
+
+        if (_state.PlayerOne.Score >= 5) Console.WriteLine("Hey Player one, guess what? You Won!");
+        if (_state.PlayerTwo.Score >= 5) Console.WriteLine("Hey Player two, guess what? You Won!");
     }
 
     private bool Update(int tick)
@@ -55,6 +60,12 @@ class GameController
         if (_state.PlayerOne.Dead || _state.PlayerTwo.Dead)
         {
             Console.WriteLine("You Dead!");
+            return false;
+        }
+
+        if (_state.PlayerOne.Score >= 5 || _state.PlayerTwo.Score >= 5)
+        {
+            Console.WriteLine("Game is Over Score goal is reahced.");
             return false;
         }
 
@@ -77,8 +88,15 @@ class GameController
             player.Position = newPosition;
         }
 
+        if (_state.World.GetScore(newPosition))
+        {
+            _state.World.CollectScore(newPosition);
+            player.Score += 1;
+            Console.WriteLine($"You have score of: {player.Score}");
+        }
+
         // death conditions/events
-        
+
         if (_state.World.GetTile(newPosition) == TileType.Water)
         {
             player.Dead = true;
@@ -130,7 +148,7 @@ class GameController
 
     private void ApplyMoveEnemy(int tick)
     {
-        if (tick % 3 != 0) return;
+        if (tick % 3 != 0) return; // <-- enemy speed (fizz buzz)
 
         int move = _random.Next(1, 5);
 
