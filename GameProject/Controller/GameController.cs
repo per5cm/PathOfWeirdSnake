@@ -65,7 +65,7 @@ class GameController
 
         if (_state.PlayerOne.Score >= 5 || _state.PlayerTwo.Score >= 5)
         {
-            Console.WriteLine("Game is Over Score goal is reahced.");
+            Console.WriteLine("Game is Over Score goal is reached.");
             return false;
         }
 
