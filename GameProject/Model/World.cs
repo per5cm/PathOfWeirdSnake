@@ -79,7 +79,7 @@ class World
         for (int i = 0; i < 10; i++)
         {
             int x = _random.Next(1, Width - 1); // <--- from top left 1, width -2 means minus from total width. otherwise point of intrest spawns in the walls.
-            int y = _random.Next(1, Height - 1); // <--- to botom right 1,height -2 means minus from total heigh.
+            int y = _random.Next(1, Height - 1); // <--- to bottom right 1,height -2 means minus from total heigh.
             var position = new Position(x, y);
 
             if (GetTile(position) == TileType.Floor)
