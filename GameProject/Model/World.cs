@@ -99,7 +99,7 @@ class World
         _pointsOfInterest.Remove(position);
     }
 
-    public bool IsInside(Position position)
+    private bool IsInside(Position position)
     {
         return position.X >= 0 && position.X < Width && 
                position.Y >= 0 && position.Y < Height;
@@ -183,7 +183,5 @@ class World
 //            new (16, 3),
 //            new (17, 3),
 //            new (18, 3),
-//        };
-//    }
 
 #endregion
